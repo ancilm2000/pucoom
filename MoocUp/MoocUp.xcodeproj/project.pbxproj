@@ -36,6 +36,7 @@
 		1D2697E01B60292800C75B49 /* MoocUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoocUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D2697E51B60292800C75B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D2697E61B60292800C75B49 /* MoocUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoocUpTests.swift; sourceTree = "<group>"; };
+		1D2697F01B603BF800C75B49 /* MoocUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoocUp-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +91,7 @@
 		1D2697CE1B60292800C75B49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1D2697F01B603BF800C75B49 /* MoocUp-Bridging-Header.h */,
 				1D2697CF1B60292800C75B49 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -342,9 +344,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MoocUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MoocUp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +357,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MoocUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MoocUp-Bridging-Header.h";
 			};
 			name = Release;
 		};
