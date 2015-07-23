@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D2698021B603DD400C75B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2698011B603DD400C75B49 /* AppDelegate.swift */; };
-		1D2698041B603DD400C75B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2698031B603DD400C75B49 /* ViewController.swift */; };
+		1D2698041B603DD400C75B49 /* MUTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2698031B603DD400C75B49 /* MUTableViewController.swift */; };
 		1D2698071B603DD400C75B49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D2698051B603DD400C75B49 /* Main.storyboard */; };
 		1D2698091B603DD400C75B49 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D2698081B603DD400C75B49 /* Images.xcassets */; };
 		1D26980C1B603DD400C75B49 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D26980A1B603DD400C75B49 /* LaunchScreen.xib */; };
@@ -29,7 +29,7 @@
 		1D2697FC1B603DD400C75B49 /* MoocUp-ApiParseInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MoocUp-ApiParseInterface.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D2698001B603DD400C75B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D2698011B603DD400C75B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D2698031B603DD400C75B49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D2698031B603DD400C75B49 /* MUTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUTableViewController.swift; sourceTree = "<group>"; };
 		1D2698061B603DD400C75B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D2698081B603DD400C75B49 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1D26980B1B603DD400C75B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				1D2698011B603DD400C75B49 /* AppDelegate.swift */,
-				1D2698031B603DD400C75B49 /* ViewController.swift */,
+				1D2698031B603DD400C75B49 /* MUTableViewController.swift */,
 				1D2698051B603DD400C75B49 /* Main.storyboard */,
 				1D2698081B603DD400C75B49 /* Images.xcassets */,
 				1D26980A1B603DD400C75B49 /* LaunchScreen.xib */,
@@ -214,7 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D2698041B603DD400C75B49 /* ViewController.swift in Sources */,
+				1D2698041B603DD400C75B49 /* MUTableViewController.swift in Sources */,
 				1D2698021B603DD400C75B49 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +418,7 @@
 				1D26981D1B603DD400C75B49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D26981E1B603DD400C75B49 /* Build configuration list for PBXNativeTarget "MoocUp-ApiParseInterfaceTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +427,7 @@
 				1D2698201B603DD400C75B49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
