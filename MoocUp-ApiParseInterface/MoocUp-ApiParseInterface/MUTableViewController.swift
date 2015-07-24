@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 let MUServerScheme = "https"
 let MUServerHost = "api.coursera.org"
@@ -42,6 +43,55 @@ class MUTableViewController: UITableViewController {
         
         courses = coursesDict["elements"]! as! [Dictionary<String,AnyObject>]
         
+        // Uncoment below only when adding new data to Parse
+        //Create a MOOC object
+//        var mooc1 = PFObject(className: "MUMooc")
+//        mooc1.setObject("Udacity", forKey: "name")
+//
+//        //Create three course objects
+//        var course1 = PFObject(className: "MUCourse")
+//        course1["name"] = courses[3]["name"] as! String
+//        course1["photo"] = courses[3]["photo"] as! String
+//        course1["mooc"] = mooc1
+//        
+//        var course2 = PFObject(className: "MUCourse")
+//        course2["name"] = courses[4]["name"] as! String
+//        course2["photo"] = courses[4]["photo"] as! String
+//        course2["mooc"] = mooc1
+//        
+//        var course3 = PFObject(className: "MUCourse")
+//        course3["name"] = courses[6]["name"] as! String
+//        course3["photo"] = courses[6]["photo"] as! String
+//        course3["smallIcon"] = courses[6]["smallIcon"] as! String
+//        course3["mooc"] = mooc1
+//        
+//        course1.saveInBackground()
+//        course2.saveInBackground()
+//        course3.saveInBackground()
+        
+        
+        //Uncomment below to fetch from cloud the courses
+
+        var query = PFQuery(className: "MUCourse")
+        query.whereKeyExists("mooc")
+        
+        query.findObjectsInBackgroundWithBlock {
+            ( foundCourses: [AnyObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                
+                for foundCourse in foundCourses as! [PFObject] {
+                    var name = foundCourse["name"] as! String
+                    var photo = foundCourse["photo"] as! String
+                    println("***** Course ***** \n\tname: \(name) \n\tphoto: \(photo)")
+                }
+            }
+            else {
+                println("Error fetching parse data")
+            }
+        }
+        
+        //end of fetch
     }
 
     //MARK: - URL Construction Methods
@@ -104,6 +154,5 @@ class MUTableViewController: UITableViewController {
         
         return cell
     }
-
 }
 
